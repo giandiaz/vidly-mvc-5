@@ -41,6 +41,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -108,12 +114,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -172,19 +172,98 @@
     <Compile Include="Migrations\201709121943521_InitialModel.Designer.cs">
       <DependentUpon>201709121943521_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201709122030069_AddIsSuscribedToCustomer.cs" />
-    <Compile Include="Migrations\201709122030069_AddIsSuscribedToCustomer.Designer.cs">
-      <DependentUpon>201709122030069_AddIsSuscribedToCustomer.cs</DependentUpon>
+    <Compile Include="Migrations\201709151724121_AddMembershipType.cs" />
+    <Compile Include="Migrations\201709151724121_AddMembershipType.Designer.cs">
+      <DependentUpon>201709151724121_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709151727588_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201709151727588_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201709151727588_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709211843014_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201709211843014_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201709211843014_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710131839145_AddNameMembershipType.cs" />
+    <Compile Include="Migrations\201710131839145_AddNameMembershipType.Designer.cs">
+      <DependentUpon>201710131839145_AddNameMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710131848489_UpdateNameMembershipType.cs" />
+    <Compile Include="Migrations\201710131848489_UpdateNameMembershipType.Designer.cs">
+      <DependentUpon>201710131848489_UpdateNameMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710132022134_AddBirthdayCustomer.cs" />
+    <Compile Include="Migrations\201710132022134_AddBirthdayCustomer.Designer.cs">
+      <DependentUpon>201710132022134_AddBirthdayCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710132022486_UpdateBirthdayCustomer.cs" />
+    <Compile Include="Migrations\201710132022486_UpdateBirthdayCustomer.Designer.cs">
+      <DependentUpon>201710132022486_UpdateBirthdayCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710171510152_CreateMovie.cs" />
+    <Compile Include="Migrations\201710171510152_CreateMovie.Designer.cs">
+      <DependentUpon>201710171510152_CreateMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710171513056_SetDataMovies.cs" />
+    <Compile Include="Migrations\201710171513056_SetDataMovies.Designer.cs">
+      <DependentUpon>201710171513056_SetDataMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710232047416_MovieGenre.cs" />
+    <Compile Include="Migrations\201710232047416_MovieGenre.Designer.cs">
+      <DependentUpon>201710232047416_MovieGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710232049547_DataGenre.cs" />
+    <Compile Include="Migrations\201710232049547_DataGenre.Designer.cs">
+      <DependentUpon>201710232049547_DataGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710311846543_AlterTableMovies.cs" />
+    <Compile Include="Migrations\201710311846543_AlterTableMovies.Designer.cs">
+      <DependentUpon>201710311846543_AlterTableMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712251617091_UpdateModelMovies.cs" />
+    <Compile Include="Migrations\201712251617091_UpdateModelMovies.Designer.cs">
+      <DependentUpon>201712251617091_UpdateModelMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712251619265_UpdateDataMovies.cs" />
+    <Compile Include="Migrations\201712251619265_UpdateDataMovies.Designer.cs">
+      <DependentUpon>201712251619265_UpdateDataMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712251637158_UpdateModelMovies2.cs" />
+    <Compile Include="Migrations\201712251637158_UpdateModelMovies2.Designer.cs">
+      <DependentUpon>201712251637158_UpdateModelMovies2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712251638218_UpdateModelMovies3.cs" />
+    <Compile Include="Migrations\201712251638218_UpdateModelMovies3.Designer.cs">
+      <DependentUpon>201712251638218_UpdateModelMovies3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712251640331_UpdateDataMovies1.cs" />
+    <Compile Include="Migrations\201712251640331_UpdateDataMovies1.Designer.cs">
+      <DependentUpon>201712251640331_UpdateDataMovies1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712251742423_UpdateModelMovies4.cs" />
+    <Compile Include="Migrations\201712251742423_UpdateModelMovies4.Designer.cs">
+      <DependentUpon>201712251742423_UpdateModelMovies4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712260416188_UpdateModelGenreId.cs" />
+    <Compile Include="Migrations\201712260416188_UpdateModelGenreId.Designer.cs">
+      <DependentUpon>201712260416188_UpdateModelGenreId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712260439381_UpdateModelGenreIdInt.cs" />
+    <Compile Include="Migrations\201712260439381_UpdateModelGenreIdInt.Designer.cs">
+      <DependentUpon>201712260439381_UpdateModelGenreIdInt.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -248,7 +327,10 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <None Include="Views\Customers\Details.cshtml" />
     <None Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
     <None Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -264,8 +346,65 @@
     <EmbeddedResource Include="Migrations\201709121943521_InitialModel.resx">
       <DependentUpon>201709121943521_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709122030069_AddIsSuscribedToCustomer.resx">
-      <DependentUpon>201709122030069_AddIsSuscribedToCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201709151724121_AddMembershipType.resx">
+      <DependentUpon>201709151724121_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709151727588_PopulateMembershipTypes.resx">
+      <DependentUpon>201709151727588_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709211843014_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201709211843014_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710131839145_AddNameMembershipType.resx">
+      <DependentUpon>201710131839145_AddNameMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710131848489_UpdateNameMembershipType.resx">
+      <DependentUpon>201710131848489_UpdateNameMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710132022134_AddBirthdayCustomer.resx">
+      <DependentUpon>201710132022134_AddBirthdayCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710132022486_UpdateBirthdayCustomer.resx">
+      <DependentUpon>201710132022486_UpdateBirthdayCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710171510152_CreateMovie.resx">
+      <DependentUpon>201710171510152_CreateMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710171513056_SetDataMovies.resx">
+      <DependentUpon>201710171513056_SetDataMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710232047416_MovieGenre.resx">
+      <DependentUpon>201710232047416_MovieGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710232049547_DataGenre.resx">
+      <DependentUpon>201710232049547_DataGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710311846543_AlterTableMovies.resx">
+      <DependentUpon>201710311846543_AlterTableMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712251617091_UpdateModelMovies.resx">
+      <DependentUpon>201712251617091_UpdateModelMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712251619265_UpdateDataMovies.resx">
+      <DependentUpon>201712251619265_UpdateDataMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712251637158_UpdateModelMovies2.resx">
+      <DependentUpon>201712251637158_UpdateModelMovies2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712251638218_UpdateModelMovies3.resx">
+      <DependentUpon>201712251638218_UpdateModelMovies3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712251640331_UpdateDataMovies1.resx">
+      <DependentUpon>201712251640331_UpdateDataMovies1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712251742423_UpdateModelMovies4.resx">
+      <DependentUpon>201712251742423_UpdateModelMovies4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712260416188_UpdateModelGenreId.resx">
+      <DependentUpon>201712260416188_UpdateModelGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712260439381_UpdateModelGenreIdInt.resx">
+      <DependentUpon>201712260439381_UpdateModelGenreIdInt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
